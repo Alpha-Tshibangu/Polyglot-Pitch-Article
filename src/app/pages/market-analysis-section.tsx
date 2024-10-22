@@ -90,7 +90,7 @@ const MarketAnalysis = () => {
       </div>
 
       <p className="text-gray-600 dark:text-gray-300 italic border-l border-gray-200 dark:border-gray-700 pl-4">
-        This structure presents a clear path for Polyglot's growth while demonstrating realistic market sizing and acquisition targets.
+        This structure presents a clear path for Polyglot&#39;s growth while demonstrating realistic market sizing and acquisition targets.
       </p>
     </section>
   )

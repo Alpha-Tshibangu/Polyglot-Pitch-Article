@@ -139,7 +139,7 @@ const ProductRoadmap = () => {
         </div>
 
         <p className="mt-8 text-gray-600 dark:text-gray-300 italic">
-          This roadmap aligns with Polyglot's customer needs and demonstrates how each feature contributes 
+          This roadmap aligns with Polyglot&#39;s customer needs and demonstrates how each feature contributes 
           to long-term product defensibility.
         </p>
       </section>

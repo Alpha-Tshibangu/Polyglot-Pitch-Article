@@ -109,7 +109,7 @@ export default function Component() {
             className={`w-full object-cover rounded-lg mb-8 ${backgroundImageLoaded ? 'block' : 'hidden'}`}
           />
           <blockquote className="border-l-4 border-gray-300 dark:border-gray-700 pl-4 italic my-8 text-gray-700 dark:text-gray-300">
-            &#34;Polyglot's mission is to break down language barriers and accelerate universal language fluency, making inclusivity and seamless interaction accessible to everyone.&#34; 
+            &#34;Polyglot&#39;s mission is to break down language barriers and accelerate universal language fluency, making inclusivity and seamless interaction accessible to everyone.&#34; 
           </blockquote>
           <div className="border-l-4 border-blue-600 pl-4 mt-4 mb-4">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
@@ -168,13 +168,13 @@ export default function Component() {
           </h2>
         </div>
         <p className="mt-6">
-          Polyglot's mission is to break down language barriers and accelerate universal language fluency through AI, 
+          Polyglot&#39;s mission is to break down language barriers and accelerate universal language fluency through AI, 
           making inclusivity and seamless interaction accessible to everyone. 
         </p>
         <p className="mt-4">
           This is the future I envision — where language is no longer a barrier, but the bridge that connects us all. 
-          Join me, as I break down these barriers and build these bridges. Together, we can turn the words of Ludwig Wittgenstein's in our favour 
-          — 'the limits of my language mean the limits of my world' — and with AI-powered communication, the world itself, becomes limitless.
+          Join me, as I break down these barriers and build these bridges. Together, we can turn the words of Ludwig Wittgenstein&#39;s in our favour 
+          — &#39;the limits of my language mean the limits of my world&#39; — and with AI-powered communication, the world itself, becomes limitless.
         </p>
       </main>
       <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">

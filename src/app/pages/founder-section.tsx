@@ -91,7 +91,7 @@ const FounderSection = () => {
             </div>
 
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm currently building the MVP for Polyglot leveraging my deep understanding of AI development and multilingual technology. 
+              I&#39;m currently building the MVP for Polyglot leveraging my deep understanding of AI development and multilingual technology. 
               With expertise in software engineering and product development, I have designed Polyglot to tackle 
               real-time multilingual communication challenges. I am committed to scaling the platform, ensuring it 
               meets global demands across industries such as education, small businesses, and events.
@@ -108,8 +108,8 @@ const FounderSection = () => {
           </h3>
           
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed border-l-4 border-gray-200 dark:border-gray-700 pl-4">
-            As Polyglot grows, I'm building a robust team to scale operations and accelerate product development.
-            Each role is designed to support Polyglot's rapid scaling and market expansion:
+            As Polyglot grows, I&#39;m building a robust team to scale operations and accelerate product development.
+            Each role is designed to support Polyglot&#39;s rapid scaling and market expansion:
           </p>
         </div>
 

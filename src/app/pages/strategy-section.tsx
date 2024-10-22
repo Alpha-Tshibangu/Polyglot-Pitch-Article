@@ -19,7 +19,7 @@ const StrategySection = () => {
             <p className="text-gray-700 dark:text-gray-300 ml-11">
               Start with a <span className="font-semibold">freemium model</span> targeting 
               <span className="font-semibold"> SMBs and educational institutions</span>. 
-              Users can experience Polyglot's core multilingual features for free, and then upgrade 
+              Users can experience Polyglot&#39;s core multilingual features for free, and then upgrade 
               as their needs grow. This approach drives organic growth and lowers acquisition costs, 
               similar to strategies used by SaaS companies like Zoom.
             </p>
