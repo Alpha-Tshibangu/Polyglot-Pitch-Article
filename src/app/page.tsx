@@ -103,7 +103,7 @@ export default function Component() {
             />
             <div className="text-gray-600 dark:text-gray-400">
               <p className="font-semibold">Alpha Tshibangu</p>
-              <p className="text-sm">October 17, 2024 · 3 min read</p>
+              <p className="text-sm">October 17, 2024 · 7 min read</p>
             </div>
           </div>
           {!backgroundImageLoaded && <ImageSkeleton />}
@@ -131,7 +131,7 @@ export default function Component() {
             <MarketAnalysis />
           </div>
           <div className="mt-12 mb-8">
-            <MarketVennDiagram />
+            <MarketVennDiagram isDarkMode={darkMode}/>
           </div>
           <p className="text-gray-600 dark:text-gray-300 italic border-l border-gray-200 dark:border-gray-700 pl-4">
           The Venn diagram illustrates how different portions of the language services market—ranging from the total potential (TAM), the serviceable market for AI-driven translation tools (SAM), and the near-term obtainable market (SOM)—overlap to demonstrate the scalable revenue opportunities, starting from early adopters and expanding toward broader global sectors.

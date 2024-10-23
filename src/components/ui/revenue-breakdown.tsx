@@ -30,11 +30,11 @@ const RevenueBreakdown: React.FC<RevenueBreakdownProps> = ({ initialData }) => {
 
   const handleRevenueChange = (index: number, field: keyof RevenueData, value: string) => {
     const newData = [...revenueData];
-  
+    
     if (field === 'users' || field === 'revenue') {
-      newData[index][field] = parseInt(value) || 0;
+      newData[index][field] = value === '' ? 0 : Math.max(0, parseInt(value.replace(/^0+/, '')));
     }
-  
+    
     setRevenueData(newData);
   };
 
@@ -67,7 +67,7 @@ const RevenueBreakdown: React.FC<RevenueBreakdownProps> = ({ initialData }) => {
                 <TableCell>
                   <input
                     type="number"
-                    value={item.users}
+                    value={item.users || ''}
                     onChange={(e) => handleRevenueChange(index, 'users', e.target.value)}
                     className="w-full bg-transparent focus:outline-none focus:ring-1 focus:ring-gray-500 rounded px-1"
                   />
@@ -75,7 +75,7 @@ const RevenueBreakdown: React.FC<RevenueBreakdownProps> = ({ initialData }) => {
                 <TableCell>
                   <input
                     type="number"
-                    value={item.revenue}
+                    value={item.revenue || ''}
                     onChange={(e) => handleRevenueChange(index, 'revenue', e.target.value)}
                     className="w-full bg-transparent focus:outline-none focus:ring-1 focus:ring-gray-500 rounded px-1"
                   />

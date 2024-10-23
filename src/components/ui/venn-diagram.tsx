@@ -10,12 +10,17 @@ interface VennData {
   description: string
 }
 
+interface MarketVennDiagramProps {
+  isDarkMode?: boolean;
+}
+
 type ChartDatasetBackgroundColor = string | CanvasGradient | CanvasPattern | (string | CanvasGradient | CanvasPattern)[];
 
-const MarketVennDiagram = () => {
+const MarketVennDiagram = ({ isDarkMode = false }: MarketVennDiagramProps) => {
   const chartRef = useRef<Chart | null>(null)
   const cardRef = useRef<HTMLDivElement | null>(null);
   const [hoveredInfo, setHoveredInfo] = useState<{ x: number; y: number; data: VennData | null }>({ x: 0, y: 0, data: null })
+  
   const data: VennData[] = [
     { sets: ['TAM'], value: "108 Billion", description: "The global market for language services and technology, including interpretation, translation, language learning tools, and AI language models, is estimated (conservatively) to be around $65-70 billion by 2025 and reach upwards of $104-129 billion by 2032. This broader market reflects the opportunity for multilingual communication technologies across various sectors, such as education, business, travel, media and events." },
     { sets: ['SAM'], value: "15 Billion", description: "AI-driven real-time translation tools have significant potential, particularly in verticals like business collaboration, education, and professional services, and could be a $12-15 billion global market by 2026. This market represents users who are working, collaborating, and communicating globally, such as in remote work, international education, and global businesses." },
@@ -26,27 +31,27 @@ const MarketVennDiagram = () => {
     { sets: ['TAM', 'SAM', 'SOM'], value: "50 Million", description: "The intersection of TAM, SAM, and SOM is valued at $50 million, illustrating the combined opportunity for real-time AI translation solutions targeted at event organisers, SMBs, and universities. This reflects a potential capture of 0.07-0.1% of the broader TAM, emphasising the opportunity to leverage early demand for long-term growth." },
   ]
 
-  const defaultColor = 'rgba(200, 200, 200, 0.5)'
+  const defaultColor = isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(200, 200, 200, 0.5)'
   const defaultColors = Array(data.length).fill(defaultColor)
 
   const hoverColors = {
     colors: [
-      'rgba(178, 95, 118, 0.7)',    // Lighter rose pink
-      'rgba(140, 161, 216, 0.7)',   // Lighter periwinkle
-      'rgba(232, 222, 199, 0.7)',   // Lighter cream
-      'rgba(144, 238, 144, 0.7)',   // Light green
-      'rgba(255, 182, 193, 0.7)',   // Light pink
-      'rgba(173, 216, 230, 0.7)',   // Light blue
-      'rgba(221, 160, 221, 0.7)'    // Light purple
+      `rgba(178, 95, 118, ${isDarkMode ? 0.8 : 0.7})`,    // Rose pink
+      `rgba(140, 161, 216, ${isDarkMode ? 0.8 : 0.7})`,   // Periwinkle
+      `rgba(232, 222, 199, ${isDarkMode ? 0.8 : 0.7})`,   // Cream
+      `rgba(144, 238, 144, ${isDarkMode ? 0.8 : 0.7})`,   // Light green
+      `rgba(255, 182, 193, ${isDarkMode ? 0.8 : 0.7})`,   // Light pink
+      `rgba(173, 216, 230, ${isDarkMode ? 0.8 : 0.7})`,   // Light blue
+      `rgba(221, 160, 221, ${isDarkMode ? 0.8 : 0.7})`    // Light purple
     ],
     backgrounds: [
-      'rgba(178, 95, 118, 0.1)',    
-      'rgba(140, 161, 216, 0.1)',   
-      'rgba(232, 222, 199, 0.1)',   
-      'rgba(144, 238, 144, 0.1)',   
-      'rgba(255, 182, 193, 0.1)',   
-      'rgba(173, 216, 230, 0.1)',   
-      'rgba(221, 160, 221, 0.1)'    
+      `rgba(178, 95, 118, ${isDarkMode ? 0.2 : 0.1})`,    
+      `rgba(140, 161, 216, ${isDarkMode ? 0.2 : 0.1})`,   
+      `rgba(232, 222, 199, ${isDarkMode ? 0.2 : 0.1})`,   
+      `rgba(144, 238, 144, ${isDarkMode ? 0.2 : 0.1})`,   
+      `rgba(255, 182, 193, ${isDarkMode ? 0.2 : 0.1})`,   
+      `rgba(173, 216, 230, ${isDarkMode ? 0.2 : 0.1})`,   
+      `rgba(221, 160, 221, ${isDarkMode ? 0.2 : 0.1})`    
     ]
   }
 
@@ -102,10 +107,9 @@ const MarketVennDiagram = () => {
             });
           }
         } else {
-          // Reset everything to default state
           const cardElement = document.querySelector('.market-venn-card') as HTMLElement;
           if (cardElement) {
-            cardElement.style.backgroundColor = 'white';
+            cardElement.style.backgroundColor = isDarkMode ? '#1a1a1a' : 'white';
           }
           
           dataset.backgroundColor = defaultColors as ChartDatasetBackgroundColor;
@@ -130,12 +134,11 @@ const MarketVennDiagram = () => {
       chartRef.current.destroy()
     }
     
-    // Add scroll handler that immediately hides tooltip
     const handleScroll = () => {
       setHoveredInfo({ x: 0, y: 0, data: null })
       const cardElement = document.querySelector('.market-venn-card') as HTMLElement
       if (cardElement) {
-        cardElement.style.backgroundColor = 'white'
+        cardElement.style.backgroundColor = isDarkMode ? '#1a1a1a' : 'white'
       }
       if (chartRef.current?.data.datasets[0]) {
         chartRef.current.data.datasets[0].backgroundColor = defaultColors as ChartDatasetBackgroundColor
@@ -153,33 +156,40 @@ const MarketVennDiagram = () => {
       }
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isDarkMode])
 
   return (
     <Card 
       ref={cardRef}
-      className="w-full max-w-4xl mx-auto relative market-venn-card" 
-      style={{ transition: 'background-color 0.3s ease' }}
+      className={`w-full max-w-4xl mx-auto relative market-venn-card ${isDarkMode ? 'dark' : ''}`}
+      style={{ 
+        transition: 'background-color 0.3s ease',
+        backgroundColor: isDarkMode ? '#1a1a1a' : 'white'
+      }}
     >
       <CardHeader className="mb-4">
         <CardTitle className="text-lg">
           <div className="border-l-4 border-grey pl-4 mt-4 mb-4">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
               Solving Language Accessibility Market Opportunity
             </h2>
           </div>
         </CardTitle>
       </CardHeader>
       <CardContent className="relative h-[500px] flex items-center justify-center">
-        <canvas id="marketVennChart" aria-label="Market Venn Diagram" role="img"       style={{ 
-          width: '100%',
-          height: '100%',
-          maxHeight: '450px'
-        }}>
-        </canvas>
+        <canvas 
+          id="marketVennChart" 
+          aria-label="Market Venn Diagram" 
+          role="img" 
+          style={{ 
+            width: '100%',
+            height: '100%',
+            maxHeight: '450px'
+          }}
+        />
         {hoveredInfo.data && (
           <div
-            className="absolute bg-white p-2 rounded text-sm"
+            className={`absolute ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white'} p-2 rounded text-sm`}
             style={{
               left: `${hoveredInfo.x}px`,
               top: `${hoveredInfo.y}px`,
@@ -191,7 +201,9 @@ const MarketVennDiagram = () => {
           >
             <h3 className="font-semibold">{hoveredInfo.data.sets.join(' ∩ ')}</h3>
             <p>Value: ${hoveredInfo.data.value}</p>
-            <p className="text-xs mt-1">{hoveredInfo.data.description}</p>
+            <p className={`text-xs mt-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              {hoveredInfo.data.description}
+            </p>
           </div>
         )}
       </CardContent>
