@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Polyglot Waitlist",
-  description: "Polyglot is a cutting-edge video conferencing application designed to break language barriers and connect the world seamlessly.",
+  title: "Polyglot Co Ventures Pitch Article",
+  description: "Polyglot is a cutting-edge video conferencing and streaming application designed to break language barriers and connect the world seamlessly.",
 };
 
 export default function RootLayout({
