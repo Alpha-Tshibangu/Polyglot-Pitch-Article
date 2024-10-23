@@ -103,7 +103,7 @@ export default function Component() {
             />
             <div className="text-gray-600 dark:text-gray-400">
               <p className="font-semibold">Alpha Tshibangu</p>
-              <p className="text-sm">October 17, 2024 · 7 min read</p>
+              <p className="text-sm">October 23, 2024 · 7 min read</p>
             </div>
           </div>
           {!backgroundImageLoaded && <ImageSkeleton />}
