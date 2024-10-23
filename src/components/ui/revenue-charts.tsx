@@ -54,7 +54,7 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
     <div className="space-y-8">
       <section>
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Freemium Users Growth
+          Freemium User Growth
         </h3>
         <div className="h-[400px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -64,7 +64,7 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
               <YAxis stroke={chartStyle.text} />
               <Tooltip contentStyle={{ backgroundColor: darkMode ? '#1a202c' : '#ffffff' }} />
               <Legend />
-              <Line type="monotone" dataKey="users" name="Users/Contracts" stroke="#8884d8" />
+              <Line type="monotone" dataKey="users" name="Users/Years" stroke="#8884d8" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -77,7 +77,7 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
 
       <section>
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Event-Based Contracts Growth
+          Event-Based Contract Growth
         </h3>
         <div className="h-[400px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -87,7 +87,7 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
               <YAxis stroke={chartStyle.text} />
               <Tooltip contentStyle={{ backgroundColor: darkMode ? '#1a202c' : '#ffffff' }} />
               <Legend />
-              <Line type="monotone" dataKey="users" name="Users/Contracts" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="users" name="Contracts/Years" stroke="#82ca9d" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -100,7 +100,7 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
 
       <section>
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Enterprise Contracts Growth
+          Enterprise Contract Growth
         </h3>
         <div className="h-[400px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -110,7 +110,7 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
               <YAxis stroke={chartStyle.text} />
               <Tooltip contentStyle={{ backgroundColor: darkMode ? '#1a202c' : '#ffffff' }} />
               <Legend />
-              <Line type="monotone" dataKey="users" name="Users/Contracts" stroke="#ffc658" />
+              <Line type="monotone" dataKey="users" name="Contracts/Years" stroke="#ffc658" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -134,9 +134,9 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
               <YAxis stroke={chartStyle.text} />
               <Tooltip contentStyle={{ backgroundColor: darkMode ? '#1a202c' : '#ffffff' }} />
               <Legend />
-              <Line type="monotone" dataKey="freemium" name="Freemium Users ($)" stroke="#8884d8" />
-              <Line type="monotone" dataKey="eventBased" name="Event-Based Contracts ($)" stroke="#82ca9d" />
-              <Line type="monotone" dataKey="enterprise" name="Enterprise Contracts ($)" stroke="#ffc658" />
+              <Line type="monotone" dataKey="freemium" name="Freemium Users/Years" stroke="#8884d8" />
+              <Line type="monotone" dataKey="eventBased" name="Event-Based Contracts/Years" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="enterprise" name="Enterprise Contracts/Years" stroke="#ffc658" />
             </LineChart>
           </ResponsiveContainer>
         </div>
