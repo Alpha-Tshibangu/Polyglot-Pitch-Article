@@ -92,7 +92,6 @@ const MarketVennDiagram = () => {
           dataset.backgroundColor = newColors as ChartDatasetBackgroundColor;
           
           if (event.native && cardRef.current) {
-            const rect = cardRef.current.getBoundingClientRect();
             const x = (event.native as MouseEvent).clientX - 395;
             const y = (event.native as MouseEvent).clientY - 265;
             

@@ -78,7 +78,7 @@ const MarketAnalysis = () => {
                   $50-100 million
                 </span>{' '}by onboarding users (quantities provided in {' '}
                 <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
-                  'Pricing Models and Comparisons'
+                  &#39;Pricing Models and Comparisons&#39;
                 </span>{' '}section), including SMBs, educational institutions, and event organisers, with a focus on real-time translation for global events.
               </p>
               <div className="text-sm text-gray-500 dark:text-gray-400">
