@@ -130,17 +130,18 @@ const ProductRoadmap = () => {
               <ul className="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300">
                 <li>
                   <span className="font-semibold">Advanced AI Features:</span> Implement 
-                  <span className="italic"> contextual AI understanding</span>, improving translation accuracy 
-                  by capturing sentiment and cultural nuances.
+                  <span className="italic"> contextual AI understanding and model supremacy</span>, improving translation accuracy and speed
+                  by capturing sentiment and cultural nuances, and improving computing infrastructure.
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <p className="mt-8 text-gray-600 dark:text-gray-300 italic">
-          This roadmap aligns with Polyglot&#39;s customer needs and demonstrates how each feature contributes 
-          to long-term product defensibility.
+        <p className="mt-8 text-gray-600 dark:text-gray-300 italic mb-12">
+          Each milestone builds product defensibility by focusing, first on core AI translation features and early 
+          customer acquisition, then progressing toward event-specific solutions and enterprise contracts, 
+          and finally advancing AI capabilities.
         </p>
       </section>
     </div>
