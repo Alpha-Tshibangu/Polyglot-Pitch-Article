@@ -20,7 +20,7 @@ const ProductRoadmap = () => {
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Enabling seamless communication across languages during video calls. This addresses the need for businesses, 
-                educational institutions, and event organizers to operate globally without language barriers.
+                educational institutions, and event organisers to operate globally without language barriers.
               </p>
             </div>
           </div>
@@ -49,7 +49,7 @@ const ProductRoadmap = () => {
                 Group Multilingual Video-Conferencing
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Providing customized solutions for large-scale virtual or hybrid events, enabling real-time 
+                Providing customised solutions for large-scale virtual or hybrid events, enabling real-time 
                 translation for diverse audiences.
               </p>
             </div>
@@ -61,7 +61,7 @@ const ProductRoadmap = () => {
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                Enterprise Customization
+                Enterprise Customisation
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Focus on enterprises needing specific language or dialect training for internal communication, 
@@ -109,7 +109,7 @@ const ProductRoadmap = () => {
               <ul className="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300">
                 <li>
                   <span className="font-semibold">Event-Specific Features:</span> Introduce tailored solutions 
-                  for <span className="italic">virtual events</span> to target event organizers.
+                  for <span className="italic">virtual events</span> to target event organisers.
                 </li>
                 <li>
                   <span className="font-semibold">Enterprise Contracts:</span> Begin closing enterprise deals 

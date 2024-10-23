@@ -46,7 +46,7 @@ const FundingSection = () => {
             <ul className="mt-2 space-y-1 text-gray-600 dark:text-gray-300 list-disc ml-6">
               <li>Speech-to-speech translation</li>
               <li>Group multilingual video conferencing and streaming</li>
-              <li>Enterprise customizations</li>
+              <li>Enterprise customisations</li>
             </ul>
           </div>
         </div>
@@ -62,7 +62,7 @@ const FundingSection = () => {
             <p className="mt-1 text-gray-600 dark:text-gray-300">
               Recruiting an additional <span className="font-semibold">engineer</span> and 
               <span className="font-semibold"> sales and business development personnel</span>. 
-              Focus on customer acquisition targeting SMBs, event organizers, and enterprises.
+              Focus on customer acquisition targeting SMBs, event organisers, and enterprises.
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ const FundingSection = () => {
               <div className="flex items-baseline gap-3">
                 <span className="w-2 h-2 rounded-full bg-purple-600 dark:bg-purple-400 mt-2"></span>
                 <div>
-                  <span className="font-semibold">850 users</span> through mixed revenue streams:
+                  <span className="font-semibold">Approx. 595 paying users</span> through mixed revenue streams:
                   <ul className="mt-3 space-y-2 ml-4">
                     <li className="flex items-center gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-purple-400"></span>

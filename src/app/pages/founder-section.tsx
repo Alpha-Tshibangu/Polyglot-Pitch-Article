@@ -36,7 +36,7 @@ const FounderSection = () => {
       <section className="max-w-3xl">
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <div className="flex flex-col items-center md:items-start">
-            <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-customPurple dark:ring-purple-900">
+            <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 dark:ring-purple-900">
               {!profileImageLoaded && <CircularImageSkeleton />}
               <Image
                 src="/profile_picture.jpeg?height=128&width=128"
@@ -81,17 +81,17 @@ const FounderSection = () => {
           </div>
 
           <div className="space-y-4">
-            <div className="border-l-4 border-customPurple-500 pl-4">
+            <div className="border-l-4 border-blue-600 pl-4">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                 Alpha Tshibangu
               </h2>
-              <p className="text-customPurple dark:text-purple-400 font-medium">
+              <p className="text-blue-600 dark:text-purple-400 font-medium">
                 Founder & Lead Developer, Polyglot
               </p>
             </div>
 
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              I&#39;m currently building the MVP for Polyglot leveraging my deep understanding of AI development and multilingual technology. 
+              I&#39;m currently building the MVP for Polyglot, leveraging my deep understanding of AI development and multilingual technology. 
               With expertise in software engineering and product development, I have designed Polyglot to tackle 
               real-time multilingual communication challenges. I am committed to scaling the platform, ensuring it 
               meets global demands across industries such as education, small businesses, and events.
@@ -130,7 +130,7 @@ const FounderSection = () => {
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-lg">Sales & Business Development</h4>
             </div>
             <p className="text-gray-600 dark:text-gray-300 ml-9 border-l border-purple-200 dark:border-purple-800 pl-4">
-              Drive partnerships with enterprises, educational institutions, and event organizers to secure key deals.
+              Drive partnerships with enterprises, educational institutions, and event organisers to secure key deals.
             </p>
           </div>
 

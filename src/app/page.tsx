@@ -130,7 +130,7 @@ export default function Component() {
             <MarketVennDiagram />
           </div>
           <p className="text-gray-600 dark:text-gray-300 italic border-l border-gray-200 dark:border-gray-700 pl-4">
-            This structure presents a clear path for Polyglot&#39;s growth while demonstrating realistic market sizing and acquisition targets.
+          The Venn diagram illustrates how different portions of the language services market—ranging from the total potential (TAM), the serviceable market for AI-driven translation tools (SAM), and the near-term obtainable market (SOM)—overlap to demonstrate the scalable revenue opportunities, starting from early adopters and expanding toward broader global sectors.
           </p>
           <div className="border-l-4 border-orange-500 pl-4 mt-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
@@ -164,11 +164,9 @@ export default function Component() {
               </button>
             </p>
           </div>
-          <div className="border-l-4 border-customPurple pl-4 mt-12 mb-4">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-8">
             Team Composition and Hiring
-            </h2>
-          </div>
+          </h2>
           <div className="mt-8 mb-4">
             <FounderSection />
           </div>

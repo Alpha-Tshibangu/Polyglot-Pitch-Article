@@ -33,9 +33,9 @@ const StrategySection = () => {
               Sales-Led Approach for Enterprises
             </h3>
             <p className="text-gray-700 dark:text-gray-300 ml-11">
-              For <span className="font-semibold">larger organizations and universities</span>, adopt a 
+              For <span className="font-semibold">larger organisations and universities</span>, adopt a 
               <span className="font-semibold"> sales-led motion</span> with tailored demos and relationship 
-              building. This ensures personalized solutions for complex needs, helping to secure enterprise 
+              building. This ensures personalised solutions for complex needs, helping to secure enterprise 
               contracts.
             </p>
           </div>
@@ -71,7 +71,7 @@ const StrategySection = () => {
             </h3>
             <p className="text-gray-700 dark:text-gray-300 ml-11">
               Charge <span className="font-semibold">flat fees</span> for large virtual or hybrid events, 
-              catering to event organizers needing real-time translation at scale.
+              catering to event organisers needing real-time translation at scale.
             </p>
           </div>
         </div>
