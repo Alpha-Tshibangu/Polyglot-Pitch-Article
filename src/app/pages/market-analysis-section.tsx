@@ -76,10 +76,10 @@ const MarketAnalysis = () => {
                 In the near term, Polyglot aims to capture{' '}
                 <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   $50-100 million
-                </span>{' '}by onboarding users{' '}
+                </span>{' '}by onboarding users (quantities provided in {' '}
                 <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
-                  (numbers below)
-                </span>, including SMBs, educational institutions, and event organisers, with a focus on real-time translation for global events.
+                  'Pricing Models and Comparisons'
+                </span>{' '}section), including SMBs, educational institutions, and event organisers, with a focus on real-time translation for global events.
               </p>
               <div className="text-sm text-gray-500 dark:text-gray-400">
                 Sources: Statista, Slator
