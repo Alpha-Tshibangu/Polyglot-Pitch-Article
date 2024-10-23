@@ -73,7 +73,7 @@ export default function Component() {
     <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <header className="py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-screen-md mx-auto flex justify-between items-center">
-          <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Co Ventures Pitch Article</h1>
+          <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Polyglot Pitch Article</h1>
           <Button
             variant="ghost"
             size="icon"
