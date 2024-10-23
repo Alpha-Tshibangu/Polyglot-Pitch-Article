@@ -16,9 +16,9 @@ const MarketVennDiagram = () => {
   const chartRef = useRef<Chart | null>(null)
   const [hoveredInfo, setHoveredInfo] = useState<{ x: number; y: number; data: VennData | null }>({ x: 0, y: 0, data: null })
   const data: VennData[] = [
-    { sets: ['TAM'], value: "108 Billion", description: "Total Addressable Market: The total market demand for a product or service" },
-    { sets: ['SAM'], value: "15 Billion", description: "Serviceable Available Market: The segment of the TAM targeted by your products and services" },
-    { sets: ['SOM'], value: "100 Million", description: "Serviceable Obtainable Market: The portion of SAM that you can capture" },
+    { sets: ['TAM'], value: "108 Billion", description: "The global market for language services and technology, including interpretation, translation, language learning tools, and AI language models, is estimated (conservatively) to be around $65-70 billion by 2025 and reach upwards of $104-129 billion by 2032. This broader market reflects the opportunity for multilingual communication technologies across various sectors, such as education, business, travel, media and events." },
+    { sets: ['SAM'], value: "15 Billion", description: "AI-driven real-time translation tools have significant potential, particularly in verticals like business collaboration, education, and professional services, and could be a $12-15 billion global market by 2026. This market represents users who are working, collaborating, and communicating globally, such as in remote work, international education, and global businesses." },
+    { sets: ['SOM'], value: "100 Million", description: "The initial target market includes small-to-medium businesses, event organisers, and universities that require real-time, multilingual communication. Within the next few years, revenue of $50-100 million is achievable by capturing a fraction of the businesses and institutions seeking seamless communication solutions." },
     { sets: ['TAM', 'SAM'], value: "120 Million", description: "Overlap between TAM and SAM" },
     { sets: ['TAM', 'SOM'], value: "90 Million", description: "Overlap between TAM and SOM" },
     { sets: ['SAM', 'SOM'], value: "80 Million", description: "Overlap between SAM and SOM" },
