@@ -12,6 +12,7 @@ import FounderSection from './pages/founder-section'
 import FundingSection from './pages/funding-section'
 import MarketAnalysis from './pages/market-analysis-section'
 import MarketVennDiagram from '@/components/ui/venn-diagram'
+import PolyglotVision from './pages/introduction'
 
 // Lazy load the components
 const Image = dynamic(() => import('next/image'), { ssr: false })
@@ -107,7 +108,7 @@ export default function Component() {
           </div>
           {!backgroundImageLoaded && <ImageSkeleton />}
           <Image
-            src="/polyglot_logo.png?height=500&width=500"
+            src="/background.jpg?height=500&width=500"
             alt="Blog post cover image"
             width={800}
             height={400}
@@ -116,8 +117,11 @@ export default function Component() {
             className={`w-full object-cover rounded-lg mb-8 ${backgroundImageLoaded ? 'block' : 'hidden'}`}
           />
           <blockquote className="border-l-4 border-gray-300 dark:border-gray-700 pl-4 italic my-8 text-gray-700 dark:text-gray-300">
-            &#34;Polyglot&#39;s mission is to break down language barriers and accelerate universal language fluency, making inclusivity and seamless interaction accessible to everyone.&#34; 
+            &#34;The limits of my language mean the limits of my world.&#34; - Ludwig Wittgenstein
           </blockquote>
+          <div className="mb-12">
+            <PolyglotVision />
+          </div>
           <div className="border-l-4 border-blue-600 pl-4 mt-4 mb-4">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               Market Context and Opportunity
