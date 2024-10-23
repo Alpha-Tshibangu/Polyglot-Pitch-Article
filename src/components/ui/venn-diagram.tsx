@@ -97,8 +97,18 @@ const MarketVennDiagram = ({ isDarkMode = false }: MarketVennDiagramProps) => {
           dataset.backgroundColor = newColors as ChartDatasetBackgroundColor;
           
           if (event.native && cardRef.current) {
-            const x = (event.native as MouseEvent).clientX - 395;
-            const y = (event.native as MouseEvent).clientY - 265;
+            const rect = cardRef.current.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            
+            // Calculate centered position
+            let x = (event.native as MouseEvent).clientX - rect.left;
+            let y = (event.native as MouseEvent).clientY - rect.top;
+            
+            // For mobile (or any screen smaller than 768px)
+            if (viewportWidth < 768) {
+              x = rect.width / 2;  // Center horizontally
+              y = rect.height / 2; // Center vertically
+            }
             
             setHoveredInfo({
               x,
@@ -199,10 +209,11 @@ const MarketVennDiagram = ({ isDarkMode = false }: MarketVennDiagramProps) => {
           <div
             className={`absolute ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white'} p-2 rounded text-sm`}
             style={{
-              left: `${hoveredInfo.x}px`,
-              top: `${hoveredInfo.y}px`,
-              transform: 'translate(5px, 5px)',
-              maxWidth: '200px',
+              position: 'absolute',
+              left: '50%',
+              top: '50%',
+              transform: 'translate(-50%, -50%)',
+              maxWidth: 'min(280px, 90vw)',
               pointerEvents: 'none',
               zIndex: 50,
             }}
