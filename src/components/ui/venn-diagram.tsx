@@ -130,8 +130,6 @@ const MarketVennDiagram = () => {
       chartRef.current.destroy()
     }
     
-    canvas.style.height = '200px'
-    
     // Add scroll handler that immediately hides tooltip
     const handleScroll = () => {
       setHoveredInfo({ x: 0, y: 0, data: null })
@@ -164,10 +162,21 @@ const MarketVennDiagram = () => {
       style={{ transition: 'background-color 0.3s ease' }}
     >
       <CardHeader className="mb-4">
-        <CardTitle className="text-lg">Solving Language Accessibility Market Opportunity</CardTitle>
+        <CardTitle className="text-lg">
+          <div className="border-l-4 border-grey pl-4 mt-4 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+              Solving Language Accessibility Market Opportunity
+            </h2>
+          </div>
+        </CardTitle>
       </CardHeader>
-      <CardContent className="relative">
-        <canvas id="marketVennChart" aria-label="Market Venn Diagram" role="img" style={{ height: '400px' }}></canvas>
+      <CardContent className="relative h-[500px] flex items-center justify-center">
+        <canvas id="marketVennChart" aria-label="Market Venn Diagram" role="img"       style={{ 
+          width: '100%',
+          height: '100%',
+          maxHeight: '450px'
+        }}>
+        </canvas>
         {hoveredInfo.data && (
           <div
             className="absolute bg-white p-2 rounded text-sm"
