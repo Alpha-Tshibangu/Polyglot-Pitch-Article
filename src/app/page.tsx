@@ -157,7 +157,8 @@ export default function Component() {
               Curious about how these predictive figures could achieve $50 million ARR? 
               <button 
                 onClick={loadCustomRevenueData}
-                className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-600"
+                style={{ textDecoration: 'none' }}
+                className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-600 italic"
               >
                 Click here to view the breakdown report.
               </button>
