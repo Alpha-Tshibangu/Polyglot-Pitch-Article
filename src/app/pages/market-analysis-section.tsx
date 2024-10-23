@@ -12,18 +12,18 @@ const MarketAnalysis = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">TAM</h3>
-              <span className="text-sm text-gray-600 dark:text-gray-400">(Total Addressable Market)</span>
+              <span style={{ display: 'inline' }} className="text-sm text-gray-600 dark:text-gray-400">(Total Addressable Market)</span>
             </div>
             <div className="space-y-3 text-gray-600 dark:text-gray-300">
               <p>
-                The global language services market is projected to reach
-                <span className="font-semibold text-blue-600 dark:text-purple-400 mx-1">
+                The global language services market is projected to reach{' '}
+                <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   $108 billion by 2032
                 </span>, driven by demand across industries like healthcare, e-commerce, and legal.
               </p>
               <p>
-                Within this, AI-powered translation (NLP and neural machine translation) is a fast-growing segment, expected to hit
-                <span className="font-semibold text-blue-600 dark:text-purple-400 mx-1">
+                Within this, AI-powered translation (NLP and neural machine translation) is a fast-growing segment, expected to hit{' '}
+                <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   $27 billion by 2030
                 </span>, reflecting the rise of real-time translation solutions.
               </p>
@@ -42,15 +42,15 @@ const MarketAnalysis = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">SAM</h3>
-              <span className="text-sm text-gray-600 dark:text-gray-400">(Serviceable Available Market)</span>
+              <span style={{ display: 'inline' }} className="text-sm text-gray-600 dark:text-gray-400">(Serviceable Available Market)</span>
             </div>
             <div className="space-y-3 text-gray-600 dark:text-gray-300">
               <p>
-                Polyglot targets industries requiring
-                <span className="font-semibold text-blue-600 dark:text-purple-400 mx-1">
+                Polyglot targets industries requiring{' '}
+                <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   real-time AI translation
-                </span>for remote work, education, and global events. This AI-driven segment, focused on multilingual communication, is estimated at
-                <span className="font-semibold text-blue-600 dark:text-purple-400 mx-1">
+                </span>{' '}for remote work, education, and global events. This AI-driven segment, focused on multilingual communication, is estimated at{' '}
+                <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   $12-15 billion
                 </span>, as organisations seek seamless communication tools for international collaboration.
               </p>
@@ -69,15 +69,15 @@ const MarketAnalysis = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">SOM</h3>
-              <span className="text-sm text-gray-600 dark:text-gray-400">(Serviceable Obtainable Market)</span>
+              <span style={{ display: 'inline' }} className="text-sm text-gray-600 dark:text-gray-400">(Serviceable Obtainable Market)</span>
             </div>
             <div className="space-y-3 text-gray-600 dark:text-gray-300">
               <p>
-                In the near term, Polyglot aims to capture
-                <span className="font-semibold text-blue-600 dark:text-purple-400 mx-1">
+                In the near term, Polyglot aims to capture{' '}
+                <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   $50-100 million
-                </span>by onboarding users
-                <span className="font-semibold text-blue-600 dark:text-purple-400">
+                </span>{' '}by onboarding users{' '}
+                <span style={{ display: 'inline' }} className="font-semibold text-blue-600 dark:text-purple-400">
                   (numbers below)
                 </span>, including SMBs, educational institutions, and event organisers, with a focus on real-time translation for global events.
               </p>
