@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import RevenueBreakdown from '@/components/ui/revenue-breakdown'
-import MarketVennDiagram from '@/components/ui/venn-diagram'
 import dynamic from 'next/dynamic'
 import RevenueCharts from '@/components/ui/revenue-charts'
 import StrategySection from './pages/strategy-section'
@@ -12,6 +11,7 @@ import ProductRoadmap from './pages/product-roadmap'
 import FounderSection from './pages/founder-section'
 import FundingSection from './pages/funding-section'
 import MarketAnalysis from './pages/market-analysis-section'
+import MarketVennDiagram from '@/components/ui/venn-diagram'
 
 // Lazy load the components
 const Image = dynamic(() => import('next/image'), { ssr: false })
@@ -29,11 +29,18 @@ function CircularImageSkeleton() {
   )
 }
 
+interface RevenueData {
+  source: string;
+  users: number;
+  revenue: number;
+}
+
 export default function Component() {
   const [darkMode, setDarkMode] = useState(false)
   const [profileImageLoaded, setProfileImageLoaded] = useState(false)  
   const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false)  
-  const [customRevenueData, setCustomRevenueData] = useState(null); // State for custom revenue data
+ const [customRevenueData, setCustomRevenueData] = useState<RevenueData[] | null>(null);
+
 
   useEffect(() => {
     if (darkMode) {
@@ -57,7 +64,7 @@ export default function Component() {
     setCustomRevenueData(predictiveRevenueData); // Update the revenue breakdown with new numbers
   
     // Scroll to the breakdown section
-    document.getElementById('revenue-breakdown-section').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('revenue-breakdown-section')?.scrollIntoView({ behavior: 'smooth' });
   };
   
 
@@ -119,13 +126,16 @@ export default function Component() {
           <div>
             <MarketAnalysis />
           </div>
+          <div className="mt-12 mb-4">
+            <MarketVennDiagram />
+          </div>
           <div className="border-l-4 border-orange-500 pl-4 mt-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Revenue Breakdown
             </h2>
           </div>
           <div id="revenue-breakdown-section">
-            <RevenueBreakdown initialData={customRevenueData || null} />
+            <RevenueBreakdown initialData={customRevenueData || undefined} />
           </div>
           <div className="mt-4 mb-4">
             <StrategySection />

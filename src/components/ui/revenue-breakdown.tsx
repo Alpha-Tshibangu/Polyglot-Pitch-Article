@@ -8,16 +8,33 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const RevenueBreakdown = ({ initialData }) => {
-  const [revenueData, setRevenueData] = useState(initialData || [
+// Define the interface for the initial data
+interface RevenueData {
+  source: string;
+  users: number;
+  revenue: number;
+}
+
+// Define the prop type for the component
+interface RevenueBreakdownProps {
+  initialData?: RevenueData[] | null; 
+}
+
+
+const RevenueBreakdown: React.FC<RevenueBreakdownProps> = ({ initialData }) => {
+  const [revenueData, setRevenueData] = useState<RevenueData[]>(initialData || [
     { source: 'Enterprise Contracts', users: 3, revenue: 33500 },
     { source: 'Event Based Contracts', users: 15, revenue: 7500 },
     { source: 'Converted Freemium Subscriptions', users: 575, revenue: 500 }
   ]);
 
-  const handleRevenueChange = (index, field, value) => {
+  const handleRevenueChange = (index: number, field: keyof RevenueData, value: string) => {
     const newData = [...revenueData];
-    newData[index][field] = parseInt(value) || 0;
+  
+    if (field === 'users' || field === 'revenue') {
+      newData[index][field] = parseInt(value) || 0;
+    }
+  
     setRevenueData(newData);
   };
 
@@ -79,7 +96,7 @@ const RevenueBreakdown = ({ initialData }) => {
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-400 italic">
         Curious about the numbers? Edit them and see for yourself how changes in users or revenue per user affect the total revenue.
-        Note that converted Freemium users represent 5% of total Freemium users.
+        Note that converted Freemium subscriptions represent 5% of total Freemium users.
       </p>
     </div>
   );

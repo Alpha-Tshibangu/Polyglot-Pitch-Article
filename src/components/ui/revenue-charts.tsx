@@ -117,14 +117,14 @@ const RevenueCharts = ({ darkMode }: RevenueChartsProps) => {
         <p className="text-gray-700 dark:text-gray-300 mt-4 text-lg leading-relaxed">
         In the final graph, we can clearly see that freemium users drive the majority of ARR growth, overshadowing the slower, 
         but still valuable, contributions from enterprise and event-based contracts. 
-        Freemium's rapid adoption boosts overall ARR significantly, while the other two customer bases provide stable, 
+        Freemium&#39;s rapid adoption boosts overall ARR significantly, while the other two customer bases provide stable, 
         high-value contributions over time.
         </p>
       </section>
 
       <section>
         <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Combined ARR Growth (All Customer Bases)
+          Combined User/Contract Growth (All Customer Bases)
         </h3>
         <div className="h-[400px]">
           <ResponsiveContainer width="100%" height="100%">

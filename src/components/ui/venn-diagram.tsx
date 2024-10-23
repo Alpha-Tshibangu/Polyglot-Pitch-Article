@@ -1,12 +1,19 @@
 import React, { useEffect, useRef } from 'react';
+import { Chart, TooltipItem, ChartConfiguration, TooltipModel } from 'chart.js';
 import { VennDiagramChart } from 'chartjs-chart-venn';
 
+// Define the type for the dataset's data structure
+interface VennData {
+  sets: string[];
+  value: string;
+}
+
 const MarketVennDiagram = () => {
-  const chartRef = useRef<any>(null); // Create a ref to store the chart instance
+  const chartRef = useRef<Chart | null>(null); // Create a ref to store the chart instance
 
   // Configuration for the Venn diagram with TAM, SAM, and SOM
-  const config = {
-    type: 'venn', // Type of diagram: venn or euler
+  const config: ChartConfiguration<'venn', VennData[]> = {
+    type: 'venn',
     data: {
       labels: [
         'TAM', // Total Addressable Market
@@ -15,39 +22,44 @@ const MarketVennDiagram = () => {
         'TAM ∩ SAM', // Intersection of TAM and SAM
         'TAM ∩ SOM', // Intersection of TAM and SOM
         'SAM ∩ SOM', // Intersection of SAM and SOM
-        'TAM ∩ SAM ∩ SOM' // Intersection of all three markets
+        'TAM ∩ SAM ∩ SOM', // Intersection of all three markets
       ],
       datasets: [
         {
           label: 'Market Opportunity',
           data: [
-            { sets: ['TAM'], value: "$108 Billion" }, // TAM: $108 billion
-            { sets: ['SAM'], value: "$15 Billion" }, // SAM: $12-15 billion
-            { sets: ['SOM'], value: "$100 Million" }, // SOM: $50-100 million
-            { sets: ['TAM', 'SAM'], value: "$120 Million" }, // Intersection between TAM and SAM
-            { sets: ['TAM', 'SOM'], value: "$90 Million" }, // Intersection between TAM and SOM
-            { sets: ['SAM', 'SOM'], value: "$80 Million" }, // Intersection between SAM and SOM
-            { sets: ['TAM', 'SAM', 'SOM'], value: "$50 Million" } // Intersection of TAM, SAM, and SOM
-          ]
-        }
-      ]
+            { sets: ['TAM'], value: "$108 Billion" },
+            { sets: ['SAM'], value: "$15 Billion" },
+            { sets: ['SOM'], value: "$100 Million" },
+            { sets: ['TAM', 'SAM'], value: "$120 Million" },
+            { sets: ['TAM', 'SOM'], value: "$90 Million" },
+            { sets: ['SAM', 'SOM'], value: "$80 Million" },
+            { sets: ['TAM', 'SAM', 'SOM'], value: "$50 Million" },
+          ],
+        },
+      ],
     },
     options: {
-      title: {
-        display: true,
-        text: 'Polyglot Market Opportunity'
+      plugins: {
+        title: {
+          display: true,
+          text: 'Polyglot Market Opportunity',
+        },
+        tooltip: {
+          callbacks: {
+            label: function (
+              this: TooltipModel<'venn'>, // The `this` context for the tooltip model
+              tooltipItem: TooltipItem<'venn'>
+            ) {
+              const dataset = this.chart.data.datasets![tooltipItem.datasetIndex!];
+              const label = this.chart.data.labels![tooltipItem.dataIndex!];
+              const value = (dataset.data as VennData[])[tooltipItem.dataIndex!].value;
+              return `${label}: $${value}M`;
+            },
+          },
+        },
       },
-      tooltips: {
-        callbacks: {
-          label: function (tooltipItem, data) {
-            const dataset = data.datasets[tooltipItem.datasetIndex];
-            const label = data.labels[tooltipItem.index];
-            const value = dataset.data[tooltipItem.index].value;
-            return `${label}: $${value}M`; // Format the tooltip
-          }
-        }
-      }
-    }
+    },
   };
 
   useEffect(() => {

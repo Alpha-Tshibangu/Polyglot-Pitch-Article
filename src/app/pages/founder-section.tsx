@@ -1,4 +1,4 @@
-import { ExternalLink, Code, Users, HeartHandshake, Megaphone } from 'lucide-react'
+import { Code, Users, HeartHandshake, Megaphone } from 'lucide-react'
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 

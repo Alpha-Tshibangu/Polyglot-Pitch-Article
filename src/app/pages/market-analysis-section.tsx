@@ -1,4 +1,4 @@
-import { TrendingUp, Globe, Target, Users } from 'lucide-react'
+import { TrendingUp, Globe, Target } from 'lucide-react'
 
 const MarketAnalysis = () => {
   return (
