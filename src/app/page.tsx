@@ -185,7 +185,7 @@ export default function Component() {
         </div>
         <p className="mt-6">
           Polyglot&#39;s mission is to break down language barriers and accelerate universal language fluency through AI, 
-          making inclusivity and seamless interaction accessible to everyone. Join me in breaking down these barriers and building these bridges.
+          making inclusivity and seamless interaction accessible to everyone. Join me in breaking down language barriers and building language bridges.
         </p>
       </main>
       <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">
