@@ -126,9 +126,12 @@ export default function Component() {
           <div>
             <MarketAnalysis />
           </div>
-          <div className="mt-12 mb-4">
+          <div className="mt-12 mb-8">
             <MarketVennDiagram />
           </div>
+          <p className="text-gray-600 dark:text-gray-300 italic border-l border-gray-200 dark:border-gray-700 pl-4">
+            This structure presents a clear path for Polyglot&#39;s growth while demonstrating realistic market sizing and acquisition targets.
+          </p>
           <div className="border-l-4 border-orange-500 pl-4 mt-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Revenue Breakdown
