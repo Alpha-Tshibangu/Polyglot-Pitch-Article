@@ -187,6 +187,14 @@ const MarketVennDiagram = ({ isDarkMode = false }: MarketVennDiagramProps) => {
             maxHeight: '450px'
           }}
         />
+        <div 
+          className={`absolute bottom-4 right-4 z-10 flex items-center text-sm sm:text-base ${isDarkMode ? 'text-white' : 'text-black'}`}
+          style={{
+            animation: 'point 2s infinite'
+          }}
+        >
+          <span className="mr-2 italic text-gray-600">*Hover to explore</span>
+        </div>
         {hoveredInfo.data && (
           <div
             className={`absolute ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white'} p-2 rounded text-sm`}
