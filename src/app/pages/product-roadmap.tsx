@@ -131,7 +131,7 @@ const ProductRoadmap = () => {
                 <li>
                   <span className="font-semibold">Advanced AI Features:</span> Implement 
                   <span className="italic"> contextual AI understanding and model supremacy</span>, improving translation accuracy and speed
-                  by capturing sentiment and cultural nuances, and improving computing infrastructure.
+                  by capturing sentiment and lingual nuances, and improving computing infrastructure.
                 </li>
               </ul>
             </div>
